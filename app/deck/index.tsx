@@ -5,9 +5,8 @@ import {
   DefaultTemplate,
   SpectacleThemeOverrides,
 } from 'spectacle';
-import { MDXProvider } from '@mdx-js/react'
 
-import { SpectacleSlides } from '@/app/slides';
+import { Slides } from '@/app/slides';
 
 const theme: SpectacleThemeOverrides = {
   colors: {
@@ -22,7 +21,7 @@ const theme: SpectacleThemeOverrides = {
 export const SpectacleDeck = () => {
   return (
       <Deck className={'prose-headings:text-white bg'} theme={theme} template={<DefaultTemplate />}>
-        <SpectacleSlides />
+        <Slides />
       </Deck>
   );
 };

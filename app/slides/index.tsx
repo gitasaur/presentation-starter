@@ -1,26 +1,25 @@
 'use client';
 
-import {
-  Slide,
-  SlideLayout,
-} from 'spectacle';
+import { 
+  StatementSlide, 
+  FullSlide,
+  TwoColumnSlide,
+  ImageSlide,
+  FullImageSlide,
+  VideoSlide
+} from '@/app/ui/Slide';
 
-import IntroTitle from './intro/title.mdx';
-import IntroHistory from './intro/history.mdx';
-import IntroExampleVariables from './intro/examples/variables.mdx';
+import ExampleMDX from './example.mdx';
 
-export const SpectacleSlides = () => {
+export const Slides = () => {
   return (
     <>
-      <SlideLayout.Center>
-        <IntroTitle />
-      </SlideLayout.Center>
-      <SlideLayout.Center>
-        <IntroHistory />
-      </SlideLayout.Center>
-      <SlideLayout.Center>
-        <IntroExampleVariables />
-      </SlideLayout.Center>
+      <StatementSlide content={<ExampleMDX />} />
+      <FullSlide content={<ExampleMDX />} />
+      <TwoColumnSlide left={<ExampleMDX />} right={<ExampleMDX />} />
+      <ImageSlide src="/images/dino-example.webp" />
+      <FullImageSlide src="/images/dino-example.webp" />
+      <VideoSlide src="/video/example-video.mp4" />
     </>
   );
 };
