@@ -16,4 +16,15 @@ pnpm dev
 1. Fork/clone this repo
 1. Write your slides in Markdown (see `example.mdx`)
 1. Import your mdx slides to `app/slides/index.tsx`
-1. Wrap with one of the Slide templates.
+1. Wrap with one of the Slides.
+
+## Slides
+These are helpers which usually wrap Spectacle's [Slide Layouts](https://formidable.com/open-source/spectacle/docs/slide-layouts).
+```
+<StatementSlide content={<ExampleMDX />} />
+<FullSlide content={<ExampleMDX />} />
+<TwoColumnSlide left={<ExampleMDX />} right={<ExampleMDX />} />
+<ImageSlide src="/images/dino-example.webp" />
+<FullImageSlide src="/images/dino-example.webp" />
+<VideoSlide src="/video/example-video.mp4" />
+```
